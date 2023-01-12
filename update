@@ -1,0 +1,272 @@
+//NNEGV...............................FHZVG
+//This program in written by c proramming language.
+//This program is writen by Sumit Kumar Kismisya.
+
+
+
+//Its use is better for 9th grade student.
+//Surface areas and volumes.
+
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#define PI 3.141
+void cubiod(double,double,double);
+void cube(double);
+void cylinder(double,double);
+void totacly(double,double);
+void cone(double,double);
+void rgtcone(double,double);
+void sphereradi(double);
+void hemisphe(double);
+void totahemi(double);
+void volcubeiod(double,double,double);
+void volcube(double);
+void volcylin(double,double);
+void volcone(double,double);
+void volsphradi(double);
+void volhemi(double);
+void main()
+{
+    double r,h,l,b,a;
+    int op;
+    clrscr();
+    printf("\nPress.1.Surafce area of a cubiod.");
+    printf("\nPress.2.Surface area of a cube.");
+    printf("\nPress.3.Curved surface area of a cylinder.");
+    printf("\nPress.4.Total surface area of a cylinder.");
+    printf("\nPress.5.Curved surface area of a cone.");
+    printf("\nPress.6.Total surface area of a right circular cone.");
+    printf("\nPress.7.Surface area of sphere of radiues.");
+    printf("\nPress.8.Curved surface area of a hemisphere.");
+    printf("\nPress.9.Total surface area of a hemisphere.");
+    printf("\nPress.10.Volume of a cuboid.");
+    printf("\nPress.11.Volume of a cube.");
+    printf("\nPress.12.Volume of a cylinder.");
+    printf("\nPress.13.Volume of a cone.");
+    printf("\nPress.14.Volume of a sphere of radiues.");
+    printf("\nPress.15.Volume of a hemisphere.");
+
+    printf("\nPlease choose an option:\n");
+    scanf("%d",&op);
+    switch(op)
+    {
+        case 1:
+        cubiod(l,b,h);
+        break;
+        case 2:
+        cube(a);
+        break;
+        case 3:
+        cylinder(r,h);
+        break;
+        case 4:
+        totacly(r,h);
+        break;
+        case 5:
+        cone(r,l);
+        break;
+        case 6:
+        rgtcone(l,r);
+        break;
+        case 7:
+        sphereradi(r);
+        break;
+        case 8:
+        hemisphe(r);
+        break;
+        case 9:
+        totahemi(r);
+        break;
+        case 10:
+        volcubeiod(l,b,h);
+        break;
+        case 11:
+        volcube(a);
+        break;
+        case 12:
+        volcylin(r,h);
+        break;
+        case 13:
+        volcone(r,h);
+        break;
+        case 14:
+        volsphradi(r);
+        break;
+        case 15:
+        volhemi(r);
+        break;
+        default:
+        printf("\nThe option you entered is incorrect !!!!");
+        printf("\nTry again and choose the correct option.");
+    }
+    getch();
+}
+void cubiod(double l,double b,double h)
+{
+    double surfacarea;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the surface area of cubiod.\n");
+    printf("\nEnter the value of length:");
+    scanf("%lf",&l);
+    printf("\nEnter the value of breadth:");
+    scanf("%lf",&b);
+    printf("\nEnter the value of hieght:");
+    scanf("%lf",&h);
+    surfacarea=2*(l*b+b*h+h*l);
+    printf("\nSurface area of a cubiod = %lf",surfacarea);
+}
+void cube(double a)
+{
+    double surfacarea;
+    printf("\nYou area the most welcome!!!\n");
+    printf("\nYou have selected the surface area of cube.\n");
+    printf("\nEnter the value of a:");
+    scanf("%lf",&a);
+    surfacarea=6*pow(a,2);
+    printf("\nSurafce area of a cube = %lf",surfacarea);
+}
+void cylinder(double r,double h)
+{
+    double cursurfac;
+    printf("\nYou are the most welcome!!!");
+    printf("\nYou have selected the curved surface area of cylinder.\n");
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    printf("\nEnter the value of hieght:");
+    scanf("%lf",&h);
+    cursurfac=(2*PI*r*h);
+    printf("\nCurved surface area of cylinder = %lf",cursurfac);
+}
+void totacly(double r,double h)
+{
+    double totasurfaarea;
+    printf("\nyou are the most welcome!!!\n");
+    printf("\nYou have selected the total surface area of cylinder.\n");
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    printf("\nEnter the value of hieght:");
+    scanf("%lf",&h);
+    totasurfaarea=(2*PI*r*(r+h));
+    printf("\nTotal surface area of a cylinder = %lf",totasurfaarea);
+}
+void cone(double l,double r)
+{
+    double cursurfac;
+    printf("\nYou are the most welcome!!!");
+    printf("\nYou have selected the curved surface area of cone.\n");
+    printf("\nEnter the value of length:");
+    scanf("%lf",&l);
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    cursurfac=(PI*r*l);
+    printf("\nCurved surface area of a cone = %lf",cursurfac);
+}
+void rgtcone(double l,double r)
+{
+    double totasurfaarea;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the total surface area of right circular cone.\n");
+    printf("\nEnter the vlaue of length:");
+    scanf("%lf",&l);
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    totasurfaarea=(PI*r*(l+r));
+    printf("\nTotal surface area of a right circular cone = %lf",totasurfaarea);
+}
+void sphereradi(double r)
+{
+    double surfacarea;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the surface area of sphere of radiues.\n");
+    printf("\nEnter the valu of radiues:");
+    scanf("%lf",&r);
+    surfacarea=(4*PI*pow(r,2));
+    printf("\nSurface area of a sphere = %lf",surfacarea);
+}
+void hemisphe(double r)
+{
+    double cursurfac;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the curved surface area of a hemisphere.\n");
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    cursurfac=(2*PI*pow(r,2));
+    printf("\nCurved surface area of a hemisphere = %lf",cursurfac);
+}
+void totahemi(double r)
+{
+    double totasurfaarea;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the total surface area of hemisphere.\n");
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    totasurfaarea=(3*PI*pow(r,2));
+    printf("\nTotal surface area of a hemisphere = %lf",totasurfaarea);
+}
+void volcubeiod(double l,double b,double h)
+{
+    double volume;
+    printf("\nEnter the value of length:");
+    scanf("%lf",&l);
+    printf("\nEnter the value of breadth:");
+    scanf("%lf",&b);
+    printf("\nEnter the value of hieght:");
+    scanf("%lf",&h);
+    volume=(l*b*h);
+    printf("\nVolume of a cuboid = %lf",volume);
+}
+void volcube(double a)
+{
+    double volume;
+    printf("\nyou are the most welcome!!!\n");
+    printf("\nYou have selected the volume of cube.\n");
+    printf("\nEnter the value of a:");
+    scanf("%lf",&a);
+    volume=pow(a,3);
+    printf("\nVolume of a cube = %lf",volume);
+}
+void volcylin(double r,double h)
+{
+    double volume;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the volume of cylinder.\n");
+    printf("\neEnter the value of hieght:");
+    scanf("%lf",&h);
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    volume=(PI*pow(r,2)*h);
+    printf("\nVolume of a cylinder = %lf",volume);
+}
+void volcone(double r,double h)
+{
+    double volume;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the volume of cone.\n");
+    printf("\nEnter the value of hieght:");
+    scanf("%lf",&h);
+    printf("\nEntr the value of radiues:");
+    scanf("%lf",&r);
+    volume=(1/3*(PI*pow(r,2))*h);
+    printf("\nvolume of a cone = %lf",volume);
+}
+void volsphradi(double r)
+{
+    double volume;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the volume of sphere of radiues.\n");
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    volume=(4/3*PI*pow(r,3));
+    printf("\nVolume of a sphere of radiues = %lf",volume);
+}
+void volhemi(double r)
+{
+    double volume;
+    printf("\nYou are the most welcome!!!\n");
+    printf("\nYou have selected the volume of hemisphere.\n");
+    printf("\nEnter the value of radiues:");
+    scanf("%lf",&r);
+    volume=(2/3*PI*pow(r,3));
+    printf("\nVolume of hemisphere = %lf",volume);
+}
